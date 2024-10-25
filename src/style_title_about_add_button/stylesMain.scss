@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #1B1A17;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 97vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.input-container-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.input-field {
+    width: 100%;
+    height: 50px;
+    background: #242320;
+    border: 1px solid #FF8303;
+    color: #F0E3CAA3;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    transition: background 0.3s;
+    font-size: 18px;
+}
+
+.input-field:hover {
+    background: rgba(255, 131, 3, 0.2);
+}
+
+.add-button {
+    flex: 0 0 99px;
+    height: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #FF8303;
+    background: #1B1A17;
+    color: #FF8303;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s, box-shadow 0.3s;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.add-icon {
+    width: 30px;
+    height: 30px;
+    transition: filter 0.3s;
+}
+
+.add-button:hover {
+    background: #A35709;
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.add-button:hover .add-icon {
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 600px) {
+    .input-container-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .add-button {
+        width: 100%;
+        height: 50px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+.task-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    /* Убираем отступ сверху */
+    color: white;
+    padding: 10px 0;
+    font-size: 27px;
+}
+
+.task-line {
+    width: 52px;
+    height: 2px;
+    background-color: #FF8303;
+    border: none;
+    margin: 7px 0px;
+}
+
+.task-message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    flex-direction: column;
+}

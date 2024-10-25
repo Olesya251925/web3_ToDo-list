@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.task-container {
+    background: #242320;
+    border: 3px solid #A35709;
+    border-radius: 10px;
+    width: 96%;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    .task-container-text {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        margin-right: 10px;
+        max-width: calc(100% - 50px);
+        overflow: hidden;
+
+        .task-about {
+            font-family: Roboto;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            color: #F0E3CA;
+            margin: 0;
+            overflow-wrap: break-word;
+        }
+
+        .task-title {
+            font-family: Roboto;
+            font-size: 27px;
+            font-weight: 500;
+            line-height: 25.78px;
+            text-align: left;
+            color: #F0E3CA;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+    }
+
+    .delete-button {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        border: 2px solid #A35709;
+        background: #1B1A17;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background 0.3s, transform 0.3s;
+
+        &:hover {
+            background: #A35709;
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 18px;
+            height: 18px;
+            transition: filter 0.3s;
+
+            &:hover {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+}
+
+
+.task-container.hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 600px) {
+    .task-title {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .task-about {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .task-container-text {
+        margin-right: 5px;
+    }
+
+    .delete-button {
+        width: 35px;
+        height: 35px;
+
+        img {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
