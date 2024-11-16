@@ -30,7 +30,7 @@ export default function EditModal({ isOpen, onClose, task, onSave }) {
                     value={title}
                     onChange={(e) => {
                         setTitle(e.target.value);
-                        if (errorMessage) setErrorMessage(''); // Сбрасываем сообщение об ошибке при вводе
+                        if (errorMessage) setErrorMessage('');
                     }}
                     placeholder="Mini Input"
                     className="modal-input"
@@ -39,7 +39,7 @@ export default function EditModal({ isOpen, onClose, task, onSave }) {
                     value={about}
                     onChange={(e) => {
                         setAbout(e.target.value);
-                        if (errorMessage) setErrorMessage(''); // Сбрасываем сообщение об ошибке при вводе
+                        if (errorMessage) setErrorMessage('');
                     }}
                     placeholder="Max Input"
                     className="modal-textarea"
